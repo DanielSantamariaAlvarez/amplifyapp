@@ -1,19 +1,29 @@
 {
   "auth": {
-    "amplifyappdef5b8b3": {
+    "amplifyapp": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "customAuth": false,
       "frontendAuthConfig": {
         "socialProviders": [],
-        "usernameAttributes": [],
-        "signupAttributes": [
+        "usernameAttributes": [
           "EMAIL"
+        ],
+        "signupAttributes": [
+          "NAME",
+          "PHONE_NUMBER",
+          "LOCALE",
+          "PROFILE"
         ],
         "passwordProtectionSettings": {
           "passwordPolicyMinLength": 8,
-          "passwordPolicyCharacters": []
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ]
         },
         "mfaConfiguration": "OFF",
         "mfaTypes": [

@@ -15,3 +15,4 @@ function App() {
 }
 
 export default withAuthenticator(App);
+// End of src/App.js
